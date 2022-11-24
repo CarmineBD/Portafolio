@@ -115,7 +115,7 @@ button{
 .big-section{
     background-color: $primary;
     border-radius: 64px;
-    height: 80vh;
+    // height: 80vh;
     padding: 4rem;
 }
 
@@ -135,13 +135,13 @@ button{
 
 main{
 
-    section:nth-of-type(1){
+    section:nth-child(1){
         height: 100vh;     
     }
 
     // Proyectos
-    section:nth-of-type(2){
-        min-height: 100vh;
+    section:nth-child(2){
+        // min-height: 100vh;
 
         // Recuadro verde con esquinas redondeadas
         .big-section{
@@ -180,15 +180,21 @@ main{
         
     }
 
-    section:nth-of-type(3){
-        height: 100vh;     
+    section:nth-child(3){
+        // height: 100%;
+        margin-bottom: 5rem;
+        
         section{
+            
             display: flex;
-            // flex-wrap: wrap;
-            // justify-content: start;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            align-content: flex-start;
+            justify-content: start;
 
             .pill{
-
+                margin-top: 2rem;
+                margin-right: 4rem;
                 .pill-label{
                     margin-bottom: 1.5rem;
                 }
@@ -217,15 +223,15 @@ main{
                 }
             }
 
-            .pill + .pill{
-                margin-left: 4rem;
-            }
+            // .pill + .pill{
+            //     margin-left: 4rem;
+            // }
 
         }
     }
 
-    section:nth-of-type(4){
-        height: 100vh;     
+    section:nth-child(4){
+        // height: 100vh;     
     }
 
 }
