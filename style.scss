@@ -1,0 +1,267 @@
+$primary: #D7EEE8;
+$secondary: #EDF6F9;
+$light: #F9F9F9;
+$success: #06D6A0;
+$dark: #073B4C;
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+@font-face {
+    font-family: Lexend;
+    src: url(fonts\Lexend-Regular.ttf);
+}
+
+img{
+    // width: 100%;
+    height: 100%;
+}
+
+figure{
+    // background-color: red;
+}
+
+html{
+    min-height:100%;/* make sure it is at least as tall as the viewport */
+    position:relative;
+}
+body{
+    height:100%; /* force the BODY element to match the height of the HTML element */
+}
+
+
+img{
+ width: 100%;
+}
+*{
+    font-family: Lexend;
+    color: $dark;
+}
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 4.5rem;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1rem;
+    font-weight: regular;
+}
+
+a{
+    color: $success;
+}
+
+nav{
+    width: 100%;
+    // height: 80px;
+    position: fixed;
+    z-index: 2;
+    padding: 16px 32px;
+
+    a{
+        font-size: 1rem;
+        font-weight: bold;
+        text-decoration: none;
+        color: $dark;
+    }
+
+    hr{
+        width: 32px;
+        rotate: 90deg;
+    }
+}
+
+
+
+.card{
+    min-width: 300px;
+    max-width: 360px;
+    border-radius: 1rem;
+    border: none;
+    overflow: hidden;
+    box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.15);
+}
+
+.card-header{
+    height: 300px;
+    aspect-ratio: 16/9;
+}
+
+.card-body{
+    height: 300px;
+
+}
+
+button{
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: $success;
+    border-radius: 12px;
+    border: none;
+    color: $light;
+    padding: 0.75rem 1.75rem 0.75rem 1.75rem;
+}
+
+.big-section{
+    background-color: $primary;
+    border-radius: 64px;
+    height: 80vh;
+    padding: 4rem;
+}
+
+.background{
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background-color: $secondary;
+    div{
+        background-color: #fff;
+        width: 100vw;
+        height: 110vh;
+        
+    }
+}
+
+main{
+
+    section:nth-of-type(1){
+        height: 100vh;     
+    }
+
+    // Proyectos
+    section:nth-of-type(2){
+        min-height: 100vh;
+
+        // Recuadro verde con esquinas redondeadas
+        .big-section{
+            height: 100%;
+            margin-bottom: 4.5rem;
+
+            .filters{
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+                a{
+                    color: $dark;
+                    font-size: 1.5rem;
+                    text-decoration: none;
+                }
+                hr{
+                    width: 32px;
+                    rotate: 90deg;
+                }
+            }
+
+            .carrusel{
+                
+                overflow: hidden;
+
+                .card + .card {
+                    margin-left: 2rem;
+                }
+
+                .card{
+
+                }
+            }
+
+
+        }
+        
+    }
+
+    section:nth-of-type(3){
+        height: 100vh;     
+        section{
+            display: flex;
+            // flex-wrap: wrap;
+            // justify-content: start;
+
+            .pill{
+
+                .pill-label{
+                    margin-bottom: 1.5rem;
+                }
+    
+                .pill-body{
+                    display: flex;
+                    background-color: #ffffff;
+                    border-radius: 1rem;
+                    padding: 48px 32px 32px 48px;
+
+                    .technologie{
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+
+                        figure{
+                            height: 4rem;
+                        }
+                    }
+
+                    .technologie + .technologie{
+                        margin-left: 3rem;
+                    }
+    
+                }
+            }
+
+            .pill + .pill{
+                margin-left: 4rem;
+            }
+
+        }
+    }
+
+    section:nth-of-type(4){
+        height: 100vh;     
+    }
+
+}
+
+
+footer{
+    background-color: #fff;
+    height: 50vh;
+
+    a{
+        font-size: 24px;
+        text-decoration: none;
+        color: $dark;
+    }
+}
+
+.preview-window{
+    // width: 200px;
+    height: 80vh;
+    border-radius: 2rem;
+    background-color: #fff;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.blur-background{
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0%;
+    left: 0%;
+    z-index: 10;
+
+}
