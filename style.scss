@@ -10,6 +10,10 @@ $dark: #073B4C;
     src: url(fonts\Lexend-Regular.ttf);
 }
 
+body{
+    overflow-x: hidden;
+}
+
 img{
     // width: 100%;
     height: 100%;
@@ -65,7 +69,7 @@ nav{
     width: 100%;
     // height: 80px;
     position: fixed;
-    z-index: 2;
+    z-index: 2000;
     padding: 16px 32px;
 
     a{
@@ -126,17 +130,85 @@ button{
     height: 100%;
     background-color: $secondary;
     div{
+        position: relative;
         background-color: #fff;
         width: 100vw;
         height: 110vh;
         
+        
+        figure{
+
+            // overflow: hidden;
+            // height: 210vh;
+            // background-color: #06D6A0;
+            // max-height: 100vh;
+            // width: 66vw;
+            // position: relative;
+            // left: 33%;
+            // top: 0%;
+
+            img{
+                position: relative;
+                top: 1002%;
+                
+            }
+        }
     }
 }
 
 main{
 
     section:nth-child(1){
-        height: 100vh;     
+        min-height: 100vh; 
+        display: flex;
+        
+        div:nth-child(1){
+            // position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 200;
+            // height: inherit;
+            // width: 50%;
+            // background-color: #06D6A0;
+            // top: 64px;
+                div:nth-child(1){
+                    // background-color: #073B4C;
+                    margin-top: 140px;
+                    aspect-ratio: 1/1;
+                    max-width: 436px;
+                    width: 100%;
+                        // height: 100px;
+                        position: relative;
+                }
+
+                img:nth-child(1){
+                    position: absolute;
+                    bottom: 50px;
+                }
+
+            // figure{
+            //     width: 100%;
+            //     max-width: 436px;
+            //     position: absolute;
+            //     transform: translate(-50%, -50%);
+            //     top: 50%;
+            //     left: 50%;
+            // }
+            figure:nth-child(1){
+                // transform: translate(-50%, -50%);
+                // top: 10%;
+                // transform: translate(0%, -50%);
+            }
+
+            img{
+                position: absolute;
+                // max-width: 436px;
+                // z-index: 1000;
+                // background-color: #073B4C;
+               
+            }
+        }
     }
 
     // Proyectos
@@ -181,8 +253,10 @@ main{
     }
 
     section:nth-child(3){
+        margin-bottom: 2rem;
         // height: 100%;
-        margin-bottom: 5rem;
+        // margin-bottom: 5rem;
+        // background-color: ;
         
         section{
             
@@ -193,7 +267,9 @@ main{
             justify-content: start;
 
             .pill{
-                margin-top: 2rem;
+                max-width: 100%;
+                overflow-x: hidden;
+                margin-bottom: 2rem;
                 margin-right: 4rem;
                 .pill-label{
                     margin-bottom: 1.5rem;
@@ -203,7 +279,7 @@ main{
                     display: flex;
                     background-color: #ffffff;
                     border-radius: 1rem;
-                    padding: 48px 32px 32px 48px;
+                    padding: 32px 24px 24px 32px;
 
                     .technologie{
                         display: flex;
@@ -212,16 +288,18 @@ main{
                         align-items: center;
 
                         figure{
-                            height: 4rem;
+                            height: 2rem;
                         }
                     }
 
                     .technologie + .technologie{
-                        margin-left: 3rem;
+                        margin-left: 2rem;
                     }
     
                 }
             }
+
+
 
             // .pill + .pill{
             //     margin-left: 4rem;
@@ -231,10 +309,121 @@ main{
     }
 
     section:nth-child(4){
-        // height: 100vh;     
+        min-height: 50vh;    
+        position: relative;
+        background-color: #D7EEE8; 
+
+        .orb{
+            position: absolute;
+        }
+        // A que me dedico
+        .orb:nth-child(1){top: 40%; left: 45%; width: 120px;}
+        // Hobbies
+        .orb:nth-child(2){top: 44%; left: 75%; width: 90px;}
+        // Soft skills
+        .orb:nth-child(3){top: 85%; left: 75%; width: 100px;}
+        // Idiomas
+        .orb:nth-child(4){top: 65%; left: 50%; width: 90px;}
+        // Motivaciones
+        .orb:nth-child(5){top: 80%; left: 20%; width: 110px;}
+        // Quien soy
+        .orb:nth-child(6){top: 44%; left: 20%; width: 125px;}
+
+
+        // A que me dedico
+        .orb:nth-child(1):hover{width: 320px;}
+        // Hobbies
+        .orb:nth-child(2):hover{width: 300px;}
+        // Soft skills
+        .orb:nth-child(3):hover{width: 30vh;}
+        // Idiomas
+        .orb:nth-child(4):hover{width: 25vh;}
+        // Motivaciones
+        .orb:nth-child(5):hover{width: 320px;}
+        // Quien soy
+        .orb:nth-child(6):hover{width: 300px;}
+
+        // .orb:nth-child(1):hover{width: 400px;}
+
+        
     }
 
 }
+
+
+
+.orb{
+    text-align: center;
+    transition: 0.3s;
+    // z-index: 1000;
+    
+    background-color: #06D6A0;
+    width: 10vh;
+    min-width: 72px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translate(-50%, -50%);
+
+
+    .orb-title{
+        font-weight: bold;
+        // transition: 0.3s;
+    }
+
+    
+
+    .orb-description{
+
+        font-size: 0px;
+        opacity: 0%;
+        padding: 0rem;
+        // display: none;
+    }
+}
+
+.orb:hover{
+    transition: 0.3s;
+    // background-color: #073B4C;
+    width:400px;
+    z-index: 100;
+    // transform: translate(-50%, 0%);
+
+    .orb-title{
+        // transition: 0.3s;
+        // margin-bottom: 1rem;
+        
+    }
+
+    .orb-description{
+        opacity: 100%;
+        font-size: 16px;
+        transition: 0.3s;
+        opacity: 100%;
+        display: initial;
+        padding: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 footer{
@@ -269,5 +458,19 @@ footer{
     top: 0%;
     left: 0%;
     z-index: 10;
+
+}
+
+
+
+
+
+@media (min-width: 576px) {
+
+    section:nth-child(4){
+        .orb{
+            
+        }
+    }
 
 }
